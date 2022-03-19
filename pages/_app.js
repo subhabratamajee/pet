@@ -2,8 +2,11 @@ import '../styles/style.css'
 import '../styles/form.css'
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 
 function MyApp({ Component, pageProps }) {
+
+  
   return (
     <>
       <Head>
@@ -20,11 +23,11 @@ function MyApp({ Component, pageProps }) {
           </Link>
         </div>
 
-        <img
-          id="title"
+        {/* <Image
+          id="title" height={20} width={20} layout="fill"
           src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Pet_logo_with_flowers.png"
           alt="pet care logo"
-        ></img>
+        /> */}
       </div>
       <div className="grid wrapper">
         <Component {...pageProps} />
