@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import dbConnect from '../../lib/dbConnect'
 import Pet from '../../models/Pet'
+import Image from 'next/image'
 
 /* Allows you to view pet card info and delete pet card*/
 const PetPage = ({ pet }) => {
@@ -24,7 +25,7 @@ const PetPage = ({ pet }) => {
   return (
     <div key={pet._id}>
       <div className="card">
-        <img src={pet.image_url} />
+        <Image width={100} height={100} src={pet.image_url} />
         <h5 className="pet-name">{pet.name}</h5>
         <div className="main-content">
           <p className="pet-name">{pet.name}</p>
